@@ -8,16 +8,35 @@
     <link href="~/lib/css/bootstrap-grid.css" rel="stylesheet" />
     <link href="~/lib/css/bootstrap-reboot.css" rel="stylesheet" />
     <link href="~/lib/css/bootstrap-utilities.css" rel="stylesheet" />
+    <link href="~/lib/css/Styles.css" rel="stylesheet" />
+    <script src="~/lib/js/bootstrap.js"></script>
+    
 </head>
 <body>
-    <h1 class="text-primary text-center p-2" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">congo.</h1>
     
-    <div class="p-1">
-        @RenderBody()
-    </div>
-</body>
-<footer class="p-3 text-center">
-    <h6>copyright@congo.com 2023</h6>
-</footer>
+    @*position is sticky and the background is a gradient*@
+        <div class="bg-dark text-white p-2 sticky-top" style="background: linear-gradient( to right, #000000, #000000, #0026ff);">
+            <span class="text-primary m-lg-2 navbar-brand" style="font-size: 30px;">congo_</span>
+        </div>
+    
 
+    
+    <div class="row m-1 p-1">
+
+        @*position is fixed so you can change filters no matter what part of the page you are on.*@
+        <div class="col-3">
+            <div id="categories" class="position-fixed">
+                <vc:categories></vc:categories>
+            </div>
+        </div>
+        
+
+        <div class="col-9">
+            @RenderBody()
+        </div>
+    </div>
+    <footer class="p-3 text-center">
+        <h6>copyright@congo.com 2023</h6>
+    </footer>
+</body>
 </html>
