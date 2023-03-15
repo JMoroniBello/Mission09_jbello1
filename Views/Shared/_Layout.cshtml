@@ -10,14 +10,23 @@
     <link href="~/lib/css/bootstrap-utilities.css" rel="stylesheet" />
     <link href="~/lib/css/Styles.css" rel="stylesheet" />
     <script src="~/lib/js/bootstrap.js"></script>
-    
+    <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+
 </head>
 <body>
     
     @*position is sticky and the background is a gradient*@
-        <div class="bg-dark text-white p-2 sticky-top" style="background: linear-gradient( to right, #000000, #000000, #0026ff);">
-            <span class="text-primary m-lg-2 navbar-brand" style="font-size: 30px;">congo_</span>
+    <div class="bg-dark text-white p-2 sticky-top" style="background: linear-gradient( to right, #000000, #000000, #0026ff);">
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand"><span class="text-primary m-lg-2 navbar-brand" style="font-size: 30px;">congo_</span></div>
+                <div class="col-4 text-right">
+                    <vc:cart-summary />
+                </div>
+            </div>
         </div>
+    </div>
     
 
     
